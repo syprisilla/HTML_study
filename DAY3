@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DAY3</h1>
+    <h2>&lt;form&gt;태그</h2>
+    <h3>사용자 입력을 서버로 전송하기 위한 공간</h3>
+    <pre>
+        action=" " 데이터를 전송할 서버 주소
+        method="get" 데이터를 URL에 붙여서 전송(주소창에 보임, 검색)
+        method="post" 데이터를 본문에 담아 전송(주소창에 안 보임, 로그인/회원가입)
+    </pre>
+
+    <h2>&lt;label&gt;태그</h2>
+    <h3>입력 요소에 대한 설명 제공</h3>
+    <pre>
+        속성
+        for="id": &lt;input&gt;요소의 id와 일치시켜 클릭 시 자동으로 포커싱됨.
+        (사용자가 직접 입력창을 누르지 않아도 라벨을 클릭하면 자동으로 입력할 준비가 됨)
+    </pre>
+
+    <h2>&lt;input&gt;태그</h2>
+    <h3>다양한 형태의 입력을 받음</h3>
+    <pre>
+        <strong>type="text"</strong>
+        일반적인 한 줄 텍스트 입력
+        속성
+        placeholder:입력 전 보여줄 힌트 텍스트
+        required:필수 입력 여부
+        maxlength,minlength:글자 수 제한
+        name:전송 시 변수명 역할
+    </pre>
+    <form>
+        <label for="id">아이디</label>
+        <input type="text" name="ID" id="id" placeholder="아이디를 입력하세요(3~5글자)"
+        maxlength="5" minlength="3" required>
+    </form>
+     <pre>
+        <strong>type="password"</strong>
+        비밀번호 입력(입력값이 보이지 않음)
+    </pre>
+    <form>
+        <label for="pwd">비밀번호</label>
+        <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요">
+    </form>
+      <pre>
+        <strong>type="checkbox"</strong>
+        여러 개 중 여러 개 선택할 수 있는 항목
+        -name이 동일하면 서버에서는 같은 그룹으로 묶임(다르면 각각 전송됨)
+        -value 속성 생략시 "on"이 기본값
+    </pre>
+    <form>
+        <label for="red">빨강</label>
+        <input type="checkbox" name="color" id="red">
+         <label for="blue">파랑</label>
+        <input type="checkbox" name="color" id="blue">
+    </form>
+
+       <pre>
+        <strong>type="radio"</strong>
+        여러 개 중 하나만 선택할 수 있음
+        -name이 동일해야 그룹이로 묶임
+    </pre>
+
+    <form>
+        <label for="one">1번</label>
+        <input type="radio" name="number" id="one">
+        <label for="two">2번</label>
+        <input type="radio" name="number" id="two">
+    </form>
+       <pre>
+        <strong>type="date"</strong>
+        날짜 선택 위젯 제공
+    </pre>
+    <form>
+        <input type="date">
+    </form>
+
+         <pre>
+        <strong>type="color"</strong>
+        색상 선택 위젯 제공
+    </pre>
+
+    <form>
+        <input type="color">
+    </form>
+
+     <h2>&lt;버튼&gt;태그 종류와 기능</h2>
+        <pre>
+        <strong>type="submit"</strong>
+        폼 데이터를 서버로 제출함
+        -같은 form안에 입력 요소가 있어야 함
+
+        두가지 유형
+        &lt;button type="submit"&gt;제출하기&lt;/button&gt; HTML요소 가능
+        &lt;input type="button" value="제출하기2"&gt; 텍스트만 가능
+    </pre>
+    <form>
+        <input type="text" placeholder="아무거나 입력해 보세요">
+        <button type="submit">제출하기</button>
+        <input type="button" value="제출하기2">
+    </form>
+        <pre>
+        <strong>type="reset"</strong>
+        입력한 값을 초기 상태로 되돌림
+        -같은 form안에 입력 요소가 있어야 함
+    </pre>
+
+    <form>
+        <input type="text" placeholder="아무거나 입력해보세요">
+        <button type="reset">초기화</button>
+    </form>
+
+         <pre>
+        <strong>type="button"</strong>
+        아무 동작 없음
+        자바스크립트를 연결해서 기능 추가 가능
+    </pre>
+
+    <form>
+        <button type="button">버튼</button>
+    </form>
+
+     <h2>&lt;select&gt; + &lt;option&gt; 태그</h2>
+    <h3>드롭다운 목록 제공</h3>
+    <pre>
+        name:서버로 보낼 때 key가 됨(사용자가 입력한 내용이 무엇에 해당하는지)
+        value:서버로 보내지는 값 (사용자가 입력한 내용)
+    </pre>
+
+    <form>
+        <select name="area" id="area">
+            <option value="s">서울</option>
+            <option value="j">전주</option>
+            <option value="c">청주</option>
+        </select>
+
+    </form>
+
+    <h2>&lt;textarea&gt;태그</h2>
+    <h3>여러 줄 입력</h3>
+    <pre>
+        name:서버로 보낼 이름
+        id:label과 연결
+        텍스트 사이에 기본값 입력 가능
+    </pre>
+
+    <form>
+        <label for="intro">자기소개</label>
+        <textarea name="int" id="intro">하이</textarea>
+    </form>
+
+    <h2>value 속성</h2>
+    <pre>
+        텍스트 입력 창에 글자가 미리 들어가 있는 상태
+        -사용자가 직접 수정이 가능함
+    </pre>
+    <form >
+        <input type="text" value="안녕하세요">
+    </form>
+
+</body>
+</html>
