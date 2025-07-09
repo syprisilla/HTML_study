@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DAY2</h1>
+    <h2>HTML 리스트 종류</h2>
+    <h3>리스트를 사용할 때는 &lt;li&gt;를 사용함</h3>
+    <pre>
+        1.순서가 없는 리스트&lt;ul&gt;
+        앞에 점이나 기호로 표시됨
+    </pre>
+    <ul>
+        <li>사과</li>
+        <li>딸기</li>
+    </ul>
+     <pre>
+        2.순서가 있는 리스트&lt;ol&gt;
+        앞에 숫자(1,2,3)로 표시됨
+    </pre>
+    <ol>
+        <li>딸기</li>
+        <li>사과</li>
+    </ol>
+    <pre>
+        3.정의 리스트&lt;dl&gt;
+        <strong>dt</strong>는 용어, <strong>dd</strong>는 설명
+        li를 사용하지 않음
+    </pre>
+    <dl>
+        <dt>HTML</dt>
+        <dd>웹 페이지의 구조를 만드는 언어</dd>
+        <dt>CSS</dt>
+        <dd>웹 페이지의 디자인을 담당하는 언어</dd>
+    </dl>
+
+    <h2>table</h2>
+    <pre>
+        <strong>table의 기본 구조</strong>
+        &lt;table&gt; (표 시작)
+        &lt;tr&gt; (표의 한 행)
+        &lt;/tr&gt;
+        &lt;tr&gt; (표의 한 행)
+        &lt;td&gt;내용&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+
+        <strong>border 속성</strong>
+        &lt;table border="1"&gt; 1은 선 굵기
+    </pre>
+    </table>
+    <table border="1">
+        <caption>border="1"</caption>
+        <tr>
+            <th>국가</th>
+        </tr>
+        <tr>
+            <td>대한민국</td>
+        </tr>
+    </table>
+
+    <pre>
+        <strong>colspan</strong>
+        열(가로) 방향으로 셀을 합치는 것
+        &lt;th colspan="2"&gt;학생정보&lt;/th&gt;:두 칸을 가로로 합치기
+    </pre>
+    <table border="1">
+        <tr>
+            <th colspan="2">학생정보</th>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td>홍길동</td>
+        </tr>
+    </table>
+     <pre>
+        <strong>rowspan</strong>
+        행(세로) 방향으로 셀을 합치는 것
+           &lt;tr&gt;
+                &lt;th rowspan="2"&gt;이름&lt;/th&gt;:두 줄을 세로로 합치기
+                &lt;td&gt;철수&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr>
+                &lt;td&gt;영희&lt;/td&gt;
+            &lt;/tr>
+        </pre>
+        <table border="1">
+            <tr>
+                <th rowspan="2">이름</th>
+                <td>철수</td>
+            </tr>
+            <tr>
+                <td>영희</td>
+            </tr>
+
+        </table>
+        <pre>
+            <strong>&lt;caption&gt;</strong>
+            표 위에 제목을 넣는 태그
+            -행 시작 전 맨 위에 작성
+        </pre>
+        <table border="1">
+            <caption>학생수</caption>
+            <tr>
+                <th colspan="2">학생수</th>
+            </tr>
+            <tr>
+                <td>청주</td>
+                <td>30명</td>
+            </tr>
+        </table>
+
+        <pre>
+            <strong>table 구조적 구분</strong>
+            &lt;thead&gt;:표의 제목 줄(th사용)
+            &lt;tbody&gt;:실제 데이터 내용
+            &lt;tfoot&gt;:표의 요약,합계 등 마지막 정보
+        </pre>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>성별</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>홍길동</td>
+                    <td>남자</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>인원</td>
+                    <td>30</td>
+                </tr>
+
+            </tfoot>
+        </table>
+        
+        <pre>
+            <strong>scope</strong>
+            해당 제목이 어떤 셀들과 관련 있는지 이해할 수 있도록 도와줌
+            -주로 &lt;th&gt;에 사용됨
+            -접근성을 향상시켜줌
+
+            <strong>scope 속성 종류</strong>
+            col:해당&lt;th&gt;는 열 전체에 적용되는 제목
+            row:해당&lt;th&gt;는 행 전체에 적용되는 제목
+            colgroup:열의 그룹을 설명할 때 사용
+            rowgroup:행의 그룹을 설명할 때 사용
+
+            <strong>행</strong>
+              &lt;table border="1"&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;이름&lt;/th&gt;
+                &lt;th scope="col"&gt;성별&lt;/th&gt;
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+                &lt;th>홍길동&lt;/th&gt;
+                &lt;th>남자&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+
+        <strong>열</strong>
+          &lt;table border="1"&gt;
+            &lt;tr&gt;
+                &lt;th scope="row">홍길동&lt;/th&gt;
+                &lt;td>90&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;영희&lt;/th&gt;
+                &lt;td>90&lt;/td&gt;
+            &lt;/tr&gt;
+
+        &lt;/table&gt;
+
+        </pre>
+        <table border="1" style="float:left; margin-right: 20px;">
+            <tr>
+                <th scope="col">이름</th>
+                <th scope="col">성별</th>
+            </tr>
+
+            <tr>
+                <th>홍길동</th>
+                <th>남자</th>
+            </tr>
+        </table>
+
+        <table border="1" style="float: left;">
+            <tr>
+                <th scope="row">홍길동</th>
+                <td>90</td>
+            </tr>
+
+            <tr>
+                <th scope="row">영희</th>
+                <td>90</td>
+            </tr>
+
+        </table>
+    
+</body>
+</html>
