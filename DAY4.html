@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <header><h1>DAY4</h1></header>
+    <nav>
+        <ul>
+            <li>
+                <a href="prac1-1.html">DAY1</a>
+            </li>
+            <li>
+                <a href="prac2-1.html">DAY2</a>
+            </li>
+            <li>
+                <a href="prac5-1.html">DAY3</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <aside>
+            <ul>
+                <li>
+                    <a href="#semantic">HTML 시멘틱</a>
+                </li>
+                <ul>
+                <li>
+                    <a href="#define">정의</a>
+                </li>
+                <li>
+                    <a href="#element">시멘틱 요소</a>
+                </li>
+                <li>
+                    <a href="#compare">Semantic vs non-Semantic</a>
+                </li>
+                 <li>
+                    <a href="#summary">&lt;details&gt;&&lt;summary&gt;</a>
+                </li>
+                </ul>
+            </ul>
+        </aside>
+
+ <article id="semantic">
+    <h2>HTML 시멘틱</h2>
+    <section id="define">
+    <h3>정의</h3>
+    <pre>
+        웹 페이지의 구조를 <strong>의미적으로 명확하게</strong> 표현하는 것을 의미
+    </pre>
+    </section>
+
+    <section id="element">
+    <h3>시멘틱 요소</h3>
+    <pre>
+        <strong>&lt;header&gt;</strong>
+        문서의 머리말 역할
+        로고,사이트명,제목,내비게이션 메뉴 등이 포함됨
+
+        <strong>&lt;nav&gt;</strong>
+        내비게이션 역할
+        주로 다른 페이지나 섹션으로 이동하는 링크 목록을 담는 영역
+
+        <strong>&lt;main&gt;</strong>
+        웹 페이지의 주요 콘텐츠 영역
+        한 문서에 한 번만 사용해야 하며 &lt;header&gt;,&lt;nav&gt;,&lt;footer&gt;과는 별개
+
+        <strong>&lt;aside&gt;</strong>
+        부가적인 콘텐츠 영역
+        광고,관련 링크,팁,공지사항 등 메인 내용과 간접적으로 관련된 정보
+        
+        <strong>&lt;article&gt;</strong>
+        독립적으로 구분 가능한 콘텐츠
+        블로그 글, 뉴스 기사처럼 그 자체로 완결된 정보
+
+        <strong>&lt;section&gt;</strong>
+        콘텐츠를 주제별로 묶는 영역
+        h2,h3 같은 제목과 함께 쓰이면 의미가 명확해짐
+
+        <strong>&lt;footer&gt;</strong>
+        꼬리말 영역
+        보통 저작권 정보, 연락처, 하단 메뉴, 개인정보처리방침 등 포함
+
+        <strong>&lt;details&gt;&&lt;summary&gt;</strong>
+        접을 수 있는 토글 콘텐츠 영역을 만듦
+        &lt;summary&gt;는 제목, 클릭하면 펼쳐지고 그 아래 &lt;p&gt;등의 내용이 나옴
+
+        <strong>&lt;figure&gt;</strong>
+        이미지나 도표, 코드 블록 등 독립적인 미디어 콘텐츠를 묶는 태그
+        -<strong>&lt;figcaption&gt;</strong> 내부 콘텐츠에 대한 설명 문구
+
+    </pre>
+    </section>
+
+    <section id="compare">
+        <h3>Semantic vs non-Semantic</h3>
+        <figure>
+            <img src="https://images-ext-1.discordapp.net/external/z5N9mcC3k3T-LED2T-fuCmFGogOKkicQq2OpEYpHg04/https/miro.medium.com/v2/resize%3Afit%3A766/1%2AZdcpe1oOwoVUgC-oggCASw.jpeg?format=webp&width=1532&height=800" 
+            alt="Semantic vs non-Semantic">
+            <figcaption>non-Semantic and Semantic</figcaption>
+        </figure>
+        <pre>
+            <strong>시멘틱 구조는 왜 중요한가?</strong>
+            div만 사용하는 구조(비시멘틱)는 의미 없이 구역만 나눠져 있어서 구조 파악이 어려움
+            반면 시멘틱 태그를 사용하면 구성 목적이 명확하고 코드가 깔끔해짐
+
+            하지만 꼭 정해진 방식은 아님
+            시멘틱 태그를 사용하는 정확한 규칙은 존재하지 않음
+            (개발자 마다 구조를 구성하는 방식이 조금씩 다를 수 있음)
+            
+            예시
+            &lt;article&gt; 안에 &lt;section&gt;
+            &lt;section&gt; 안에 &lt;article&gt;
+        </pre>
+    </section>
+
+    <section id="summary">
+        <h3>&lt;details&gt;&&lt;summary&gt;</h3>
+        <pre>
+            <strong>예시</strong>
+             &lt;details&gt;
+                &lt;summary&gt;Q. 배송은 얼마나 걸리나요?&lt;/summary&gt;
+                &lt;p&gt;배송은 평균 2~3일 소요됩니다. 도서산간 지역은 추가 배송일이 발생할 수 있습니다.&lt;/p&gt;
+             &lt;/details&gt;
+        </pre>
+        <details>
+            <summary>Q. 배송은 얼마나 걸리나요?</summary>
+            <p>배송은 평균 2~3일 소요되. 도서산간 지역은 추가 배송일이 발생할 수 있습니다.</p>
+        </details>
+    </section>
+    </article>
+
+    <footer>
+        <p>2025 Kim Sunyoung.All rights reserved</p>
+    </footer>
+    </main>
+</body>
+</html>
