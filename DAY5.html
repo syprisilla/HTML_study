@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prac8-1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DAY5</h1>
+    <h2>CSS</h2>
+    <h3>정의</h3>
+    <pre>
+        웹 페이지의 스타일을 지정하는 언어
+    </pre>
+
+    <h3>구성</h3>
+    <pre>
+        선택지{
+            속성1:값1;
+            속성2:값2;
+        }
+    </pre>
+
+    <h3>선택자 종류</h3>
+    <pre>
+        <strong>1.기본 선택자</strong>
+        <strong>p</strong>
+        모든 &lt;p&gt;태그 선택
+        &ltp style="color: red;"&gt;안녕하세요&lt/p&gt;
+    </pre>
+
+    <p style="color: red;">안녕하세요</p>
+
+    <pre>
+         <strong>.intro</strong>
+        class="intro"인 요소
+        .intro {
+            color: greenyellow;
+            font-size: 14px;
+        }
+    </pre>
+
+    <p class="intro">이 문장은 소개 문장 입니다</p>
+    <p>일반 문장 입니다</p>
+
+    <pre>
+        <strong>#main</strong>
+        id="main"인 요소
+        #main {background-color:aliceblue;}
+    </pre>
+
+    <div id="main">
+        <ul>
+            <li>홈</li>
+            <li>소개</li>
+            <li>연락처</li>
+        </ul> 
+    </div>
+
+    <pre>
+        <strong>span</strong>
+        &lt;span&gt;요소
+        span {color:purple;}
+    </pre>
+
+    <span>만나서 반가워요.</span>
+
+    <pre>
+        <strong>2.복합 선택자</strong>
+        <strong>.menu > li</strong>
+        class가 menu인 요소의 직계 자식인 &lt;li&gt;
+        ul.menu > li {list-style:square}
+    </pre>
+
+     <ul class="menu">
+            <li>홈</li>
+            <li>소개</li>
+            <li>연락처</li>
+        </ul>
+        
+    <pre>
+        <strong>li:nth-of-type(2)</strong>
+        형제 중 두 번째 &lt;li&gt;요소 선택
+        li:nth-of-type(2) {list-style:none;}
+    </pre>
+
+     <ul class="main">
+            <li>홈</li>
+            <li>소개</li>
+            <li>연락처</li>
+        </ul>
+
+    <pre>
+        <strong>h4,.in</strong>
+        &lt;h4&gt;와 class="in"인 요소 모두 선택
+        h4, .in{color:blue;}
+    </pre>
+
+    <h4>이건 h4로 작성</h4>
+    <p class="in">class가 in인 문장</p>
+
+    <pre>
+        <strong>a[href]</strong>
+        href 속성이 있는 모든 &lt;a&gt;요소 선택
+        a[href]{color:red;}
+    </pre>
+
+    <a href="#">맨위로 이동</a>
+
+    <pre>
+        <strong>button:hover</strong>
+        마우스를 올렸을 때 버튼 스타일 적용
+        button:hover{color yellow;}
+    </pre>
+    <button>눌러보세요</button>
+
+    <pre>
+        <strong>p::first-line</strong>
+        단락의 첫 줄 스타일링
+        p::first-line {font-variant:small-caps;}
+    </pre>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, minus temporibus odit consectetur tempora reprehenderit exercitationem veniam necessitatibus amet assumenda, eveniet nihil ea repellat deleniti pariatur eius sint harum non?</p>
+
+    <h3>주요 CSS 속성들</h3>
+    <pre>
+        <strong>color</strong>:글자 색상
+        
+        <strong>background-color</strong>:배경 색상
+        
+        <strong>font-size</strong>:글자 크기
+
+        <strong>font-weight</strong>:글자 굵기
+
+        <strong>text-align</strong>:정렬
+
+        <strong>line-height</strong>:줄 간격
+
+        <strong>text-decoration</strong>:밑줄
+        -text-decoration: underline;
+
+        <strong>width,height</strong>:너비,높이
+
+        <strong>margin-top</strong>:위쪽 여백
+
+        <strong>border</strong>:테두리
+        -border: 1px solid black;
+
+        <strong>box-shadow</strong>:그림자
+
+        <strong>list-style</strong>:목록 스타일
+        
+    </pre>
+
+    <p id="example">안녕 오늘 하루는 어떤가요</p>
+    
+
+    <h3>외부 CSS파일 연동</h3>
+    <pre>
+        <strong>&lt;link rel="stylesheet" href="prac8.css"&gt;</strong>
+        prac8.css에 있는 CSS가 HTML 문서에 연결되어 함께 적용됨
+
+        &lt;style&gt;안에 쓰거나 외부 .css파일에 작성
+    </pre>
+
+    <h3>CSS 우선순위</h3>
+    <pre>
+        1.인라인 스타일
+        2.&lt;style&gt;태그 안의 CSS (&lt;p style="color: red;"&gt;)
+        3.외부 CSS 파일
+        4.선택자 특이성:id>class>태그
+    </pre>
+
+</body>
+</html>
