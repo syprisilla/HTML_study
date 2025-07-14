@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prac9-1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DAY6</h1>
+    <h2>박스 모델이란?</h2>
+    <h3>웹에서 우리가 보는 모든 요소(글자,사진,버튼 등)는 네모난 박스로 되어있음</h3>
+    <img src="https://developer.mozilla.org/ko/docs/Learn_web_development/Core/Styling_basics/Box_model/box-model.png" alt="박스모델">
+    <h4>Content 영역</h4>
+    <pre>
+        진짜 냐용이 들어가는 부분(글자,이미지 등)
+    </pre>
+    <h4>Padding 영역</h4>
+    <pre>
+        내용과 테두리 사이의 공간
+        안에 있는 내용이 너무 붙지 않게 여유를 주는 공간
+    </pre>
+    <h4>Border 영역</h4>
+    <pre>
+        padding 바깥에 있는 선(테두리)
+        색깔,두께,선의 종류를 정할 수 있음
+    </pre>
+    <h4>Margin 영역</h4>
+    <pre>
+        다른 박스와 얼마나 떨어질지를 정하는 공간(바깥 여백)
+        이 공간은 투명해서 색이나 이미지가 들어가지 않음
+    </pre>
+
+    <h4>속성들</h4>
+    <h4>content</h4>
+    <ul>
+        <li>weight</li>
+        <li>height</li>
+    </ul>
+
+    <h4>padding</h4>
+    <ul>
+        <li>padding-top</li>
+        <li>padding-bottom</li>
+        <li>padding-left</li>
+        <li>padding-right</li>
+    </ul>
+
+    <h4>border</h4>
+    <ul>
+        <li>
+            <ul>
+                <li>border-top</li>
+                <li>border-bottom</li>
+                <li>border-left</li>
+                <li>border-right</li>
+            </ul>
+            </li>
+            <li>
+            <ul>
+                <li>border-width</li>
+                <li>border-style</li>
+                <li>border-color</li>
+            </ul>
+            </li>
+            <li>
+            <ul>
+                <li>border-top-width</li>
+                <li>border-top-style</li>
+                <li>border-top-color</li>
+                <li>border-right-width</li>
+                <li>border-right-style</li>
+                <li>border-right-color</li>
+                <li>border-bottom-width</li>
+                <li>border-bottom-style</li>
+                <li>border-bottom-color</li>
+                <li>border-left-width</li>
+                <li>border-left-style</li>
+                <li>border-left-color</li>
+            </ul>
+            </li>
+    </ul>
+
+    <h4>margin</h4>
+    <ul>
+        <li>margin-top</li>
+        <li>margin-bottom</li>
+        <li>margin-left</li>
+        <li>margin-right</li>
+    </ul>
+
+    <h4>속기</h4>
+    <pre>
+        padding,margin:top->right->bottom->left 시계방향
+        border:굵기->스타일->색상
+        ex border:1px dotted yellow
+    </pre>
+    
+    <div class="box">박스모델(예제)</div>
+    <div class="content">콘텐츠(예제)</div>
+    <div class="padding">패딩(예제)</div>
+    <div class="border">테두리(예제)</div>
+    <div class="margin">바깥여백(예제)</div>
+
+    <h3>블록과 인라인</h3>
+    <h4>CSS는 크게 블록 박스와 인라인 박스 유형으로 구분</h4>
+
+    <h4>블록으로 정의된 경우</h4>
+    <ul>
+        <li>인라인 방향으로 연장되어 상위 콘테이너에서 사용가능 공간 할당</li>
+        <li>새 줄로 행갈이</li>
+        <li>width height 속성 존중됨</li>
+        <li>padding margin border로 인해 다른 요소들이 밀려남</li>
+    </ul>
+
+    <div class="block">블록1</div>
+    <div class="block">블록2</div>
+    <div class="block">블록3</div>
+
+    <h4>인라인으로 정의된 경우</h4>
+    <ul>
+        <li>새 줄로 행갈이X</li>
+        <li>width와 height 적용 X</li>
+        <li>padding margin border이 다른 인라인 박스들을 밀어내지 않음</li>
+    </ul>
+
+    <span class="inline">인라인1</span>
+    <span class="inline">인라인2</span>
+    <span class="inline">인라인3</span>
+
+    <h5>문장 중간에 인라인 요소 끼워 넣기(블록은 X)</h5>
+    <p>
+        Lorem ipsum dolor sit amet <span class="in">consectetur adipisicing elit.</span> Debitis, eaque sed ut quo dolore sunt ullam architecto alias tempore molestiae error facilis odio cum velit rerum? Omnis, nobis? Et, recusandae!
+    </p>
+
+    <h4>표준 박스 모델</h4>
+    <img src="https://developer.mozilla.org/ko/docs/Learn_web_development/Core/Styling_basics/Box_model/standard-box-model.png" alt="표준박스모델">
+
+    <h5>표준박스 모델 크기</h5>
+    <pre>
+        .box {
+                      width: 350px;
+                      height: 150px;
+                      margin: 25px;
+                      padding: 25px;
+                      border: 5px solid black;
+                    }
+    </pre>
+
+    <h5>구성</h5>
+    <pre>
+        width,height:내용 크기
+        padding,border:추가로 크기에 더해짐
+        maring:바깥 여백, 별도 공간
+
+        표준 박스 모델을 사용하여 박스가 차지하는 공간은 너비410px(350+25+25+5+5), 높이 210px(150+25+25+5+5)
+    </pre>
+
+    <h4>대체 박스 모델</h4>
+    <img src="https://developer.mozilla.org/ko/docs/Learn_web_development/Core/Styling_basics/Box_model/alternate-box-model.png" alt="대체박스모델">
+     <h5>표준박스 모델 크기</h5>
+    <pre>
+        .box {
+                      box-sizing: border-box;
+                      width: 350px;
+                      height: 150px;
+                      margin: 25px;
+                      padding: 25px;
+                      border: 5px solid black;
+                    }
+    </pre>
+
+      <h5>구성</h5>
+    <pre>
+      width,height:내용+padding+border 포함된 전체 박스 크기
+      margin:바깥 여백, 별도 공간
+    </pre>
+
+    <h4>인라인 박스</h4>
+    <pre>
+        인라인은 유지하고 싶지만 block형식으로 사용하고 싶을 때
+        한글에서 이미지 적용시킬 때의 방식과 비슷
+        display:inline-block 속성
+    </pre>
+
+    <span class="inline-box">인라인1</span>
+    <span class="inline-box">인라인2</span>
+    <span class="inline-box">인라인3</span>
+
+
+   
+</body>
+</html>
