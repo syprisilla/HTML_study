@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prac11-1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DAY7</h1>
+    <h2>상속</h2>
+    <h3>정의</h3>
+    <pre>
+        HTML에서 일부 CSS 속성은 부모 요소로부터 자식 요소에게 자동으로 전달
+        <strong>상속은 텍스트 스타일 관련 속성만 기본적으로 상속됨</strong>
+    </pre>
+
+    <h4>상속되는 속성</h4>
+    <pre>
+        글자색:color
+        글꼴:font-size, font-style, font-weight 등
+        줄 간격:line-height
+        텍스트:text-align, letter-spacing, text-transform 둥
+    </pre>
+
+    <h4>상속되지 않는 속성(기본값)</h4>
+    <pre>
+        박스 모델:margin, padding, border, width, height
+        배경:background-color, background-image
+        레이아웃:display, position, top, left, float, z-index
+        테두리:border, outline
+        효과:box-shadow, transfrom, transition
+    </pre>
+
+    <h4>상속을 강제로 적용하고 싶을 때 CSS 키워드</h4>
+    <pre>
+        <strong>inherit</strong>
+        부모로부터 무조건 상속 받음
+        원래 상속 되지 않는 속성에도 강제로 상속하게 만듦
+
+        <strong>initial</strong>
+        CSS 명세서가 정한 초기값으로 되돌림
+        부모랑 상관없이 브라우저의 기본값을 따름
+
+        <strong>unset</strong>
+        상속 가능한 속성->inherit
+        상속 불가능한 속성->initial
+        (상황에 따라 알아서 결정됨)
+
+        <strong>revert</strong>
+        브라우저나 사용자 스타일 시트의 설정으로 되돌림
+        (일반 프로젝트에선 잘 안씀)
+
+        <strong>all</strong>
+        모든 속성에 대해 한번에 inherit, initial, unset, revert를 적용해주는 속성
+    </pre>
+
+    <h4>상속 예제</h4>
+    <h5>body에 기본 스타일:color:black, font-weight:bold</h5>
+    <p>기본 문단(color:red, weight:normal)</p>
+    <p class="inherit">inherit:부모인 body에서 상속->검은색,굵게</p>
+    <p class="initial">initial: 브라우저 초기값->권장,normal</p>
+    <p class="unset">unset:상속 가능한 건 상속,나머지는 초기화</p>
+    <p class="all-inherit">all-inherit:검은색, 굵게(부모 스타일 모두 상속)</p>
+    <p class="all-initial">all-initial:검정,normal(브라우저 초기값으로 복귀)</p>
+    <p class="all-unset">all-unset:검은색,normal(상속 가능한 건 상속, 나머지는 초기화)</p>
+
+    <h4>background관련 속성</h4>
+    <pre>
+        background-image:배경에 어떤 이미지를 넣을지
+        background-color:배경색
+        background-repeat:이미지 반복 여부
+        -no-repeat:이미지 한 번만 표시됨
+        background-position:이미지 위치
+        background-size:이미지 크기
+        -cover:요소를 꽉 채우도록 확대/축소
+        -contain:이미지 전체가 보이도록 맞춤
+        background-attachment:고정 여부(스크롤과 함께 움직이는지)
+        background:이 모든 걸 한줄로 묶어서 표현 가능
+
+        <strong>여러 이미지를 쉼표로 구분하면, 여러 배경을 레이어 처럼 겹쳐서 사용 가능</strong>
+        제일 마지막에 쓴 배경이 가장 아래에 깔림
+        ->그 위로 다른 이미지나 그라디언트가 겹침
+    </pre>
+
+    <h4>linear-gradient</h4>
+    <pre>
+        색이 일정한 각도로 점점 변하는 그래픽 배경을 만들어주는 함수
+        ex:linear-gradient(45deg,red,blue)
+        ->45도 방향으로 빨간색에서 파란색으로 점점 색이 바뀌는 배경
+        (각도를 정할 수 있음, 중간 지점에 색을 지정해줄 수 있음)
+    </pre>
+
+    <div class="img"></div>
+    <div class="i"></div>
+
+    <h4>border-radius</h4>
+    <pre>
+        네모 박스의 모서리를 둥글게 만들 수 있는 속성
+        %,px로 값을 줄 수 있음
+        ex:border-top-left-radius, border-bottom-right-radius 개별 설정도 가능한
+
+        border-radius:10% 가로/세로 크기에 비례해서 둥글게
+        border-radius:20px 고정된 크기만큼 둥글게
+    </pre>
+
+    <div class="border"></div>
+
+
+</body>
+</html>
