@@ -1,0 +1,79 @@
+body{
+    color: black;
+    font-weight: bold;
+}
+
+p{
+    color: red;
+    font-weight: normal;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.inherit{
+    color: inherit;
+    font-weight: inherit;
+}
+
+.initial{
+    color: initial;
+    font-weight: initial;
+}
+
+.unset{
+    color: unset;
+    font-weight: unset;
+}
+
+.all-inherit{
+    all:inherit;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.all-initial{
+    all:initial;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.all-unset{
+    all:unset;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.img{
+     padding: 0.5em;
+     border: 1px solid azure;
+     margin: 20px;
+     width: 100px;
+     height: 100px;
+     background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl8zwVyy8wiDibyIOFblqDaR4621S8pcelD1r8meymiQAolc8IPmgZXPvwmEwi50PhFjc&usqp=CAU");
+     background-repeat: no-repeat;
+     background-size: 100px 100px;
+     background-position: top center;
+}
+
+.i {
+    width: 500px;
+    height: 300px;
+    padding: 0.3em;
+    background:
+    linear-gradient(
+    105deg,
+    rgba(232, 3, 3, 0.75) 39%,
+    rgb(1, 161, 193) 96%
+         )
+    center center / 400px 200px no-repeat,
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png) center
+    no-repeat,
+    rgb(158, 133, 183);
+        }
+
+    .border {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        border-radius: 20%;
+    }
