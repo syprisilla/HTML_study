@@ -1,0 +1,158 @@
+div {
+    width: 100px;
+    height: 100px;
+    border: 2px solid gray;
+    background-color: yellow;
+    margin: 10px;
+    display: inline-block;
+}
+
+#middle{
+    background-color: greenyellow;
+}
+
+#static #middle{
+    position: static;
+    top: 100px;
+}
+
+#relative #middle{
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+#absolute{
+    position: relative;
+}
+
+#absolute #middle{
+    position: absolute;
+    top: 70px;
+    left: 60px;
+  
+}
+
+#fixed #middle{
+    position: fixed;
+    top: 50px;
+    left: 150px;
+  
+}
+
+#sticky #middle{
+    position: sticky;
+    top: 50px;
+}
+
+.circle{
+    width: 300px;
+    height: 300px;
+    background-color: azure;
+    transition: background-color 1s ease-in, border-radius 1s ease-out ;
+}
+
+.circle:hover{
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.timing div{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    margin:20px 0 ;
+    transition: margin-left 3s;
+    display: block;
+
+}
+.timing:hover div{
+    margin-left: 500px;
+}
+
+.timing div:nth-of-type(1)
+{
+    transition-timing-function: ease-out;
+}
+
+.timing div:nth-of-type(2)
+{
+    transition-timing-function: ease-in;
+}
+
+.timing div:nth-of-type(3)
+{
+    transition-timing-function: ease-in;
+}
+
+.timing div:nth-of-type(3)
+{
+    transition-timing-function: cubic-bezier(0.5,1,0.89,1);
+}
+.timing div:nth-of-type(4){
+    transition-timing-function: cubic-bezier(0.65,0,0.35,1);
+}
+
+
+.transform h3{
+    background-color: palevioletred;
+    border: 3px solid grey;
+    padding: 0.7em;
+    width: 200px;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: lighter;
+    
+}
+
+.transform h3:nth-of-type(2n)
+{
+    background-color: antiquewhite;
+}
+
+.transform h3:nth-of-type(3n)
+{
+    background-color: azure;
+}
+
+.transform h3:nth-of-type(4n)
+{
+    background-color: orange;
+}
+
+.transform section:first-of-type h3:nth-of-type(1)
+{
+    transform-origin: center;
+    transform: rotate(45deg);
+}
+
+.transform section:first-of-type h3:nth-of-type(2)
+{
+   transform: scale(0.5);
+}
+
+.transform section:first-of-type h3:nth-of-type(3)
+{
+   transform: translate(-200px,50px);
+}
+
+.transform section:nth-of-type(2) h3:nth-of-type(1)
+{
+    transform: skew(300deg);
+}
+
+.transform section:nth-of-type(2) h3:nth-of-type(2)
+{
+    transform: skew(10deg,20deg);
+}
+
+.transform section:nth-of-type(2) h3:nth-of-type(3)
+{
+    transform: rotate(-0.6turn) skew(10deg,20deg);
+}
+
+.transform section:nth-of-type(2) h3:nth-of-type(4)
+{
+    transform: translateX(-500px) rotate(180deg) scaleY(1.5);
+}
