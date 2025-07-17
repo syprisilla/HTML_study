@@ -1,0 +1,80 @@
+#h {
+  color: rgb(255, 0, 0);
+}
+
+#hi {
+    color: rgba(255,0,0,0.6);
+}
+
+#hii {
+    color: #ff0000;
+}
+
+#hiii {
+    color: hsl(0,100%,50%);
+}
+
+#hiiii{
+    color: hsla(0,100%,50%,0.6);
+}
+
+#a {
+    writing-mode: horizontal-tb;
+}
+
+#b {
+    width: 100px;
+    height: 100px;
+    writing-mode: vertical-rl;
+}
+
+#c{
+    width: 100px;
+    height: 100px;
+    writing-mode: vertical-lr;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    float:inline-end
+}
+
+#q{
+    border: 2px solid blue;
+    background-color: antiquewhite;
+    opacity: 50%;
+    font-size: 50%;
+    writing-mode: horizontal-tb;
+    inline-size: 200px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+}
+
+#w{
+    border: 2px solid blue;
+    background-color: antiquewhite;
+    opacity: 50%;
+    font-size: 50%;
+    writing-mode: horizontal-tb;
+    inline-size: 200px;
+    width: 100px;
+    height: 100px;
+    overflow: auto;
+    
+}
+
+#e{
+    border: 2px solid blue;
+    background-color: antiquewhite;
+    opacity: 50%;
+    font-size: 50%;
+    writing-mode: horizontal-tb;
+    inline-size: 200px;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+    
+}
