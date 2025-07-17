@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prac12-1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DAY8</h1>
+    <h2>Html 단위</h2>
+    <pre>
+        <strong>px</strong>
+        화면 상 실제 필셀 수
+        
+        <strong>em</strong>
+        해당 요소의 글꼴 크기 기준(상대 단위)
+        ex:3em->자기 글꼴 크기의 3배
+
+        <strong>rem</strong>
+        루트 요소의 글꼴 크기 기준
+
+        <strong>vw</strong>
+        브라우저 너비 %단위(1%=1vw)
+        ex:padding: 10vw->브라우저 너비의 10%만큼 여백 생김
+
+        <strong>em VS rem 차이</strong>
+        em:부모의 크기 기준->달라질 수 있음
+        rem:html의 크기 기준->항상 일정함
+    </pre>
+
+    <h2>색상 단위</h2>
+    <pre>
+        <strong>rgb</strong>
+        ex:rgb(255,0,0) 빨간색
+         <div id="h">안녕하세요</div>
+     </pre>
+
+
+     <pre>
+        <strong>rgba</strong>
+        ex:rbga(255,0,0,0.6) 빨간색 + 60% 불투명도
+        <div id="hi">안녕하세요</div>
+     </pre>
+
+    
+      <pre>
+        <strong>Hex코드</strong>
+        ex:#ff0000 빨간색
+        <div id="hii">안녕하세요</div>
+     </pre>
+
+    
+       <pre>
+        <strong>hsl</strong>
+        ex:hsl(0,100%,50%) 색상:0도(빨강) 채도 100% 밝기 50%
+         <div id="hiii">안녕하세요</div>
+     </pre>
+
+
+      <pre>
+        <strong>hsla</strong>
+        ex:hsla(0,100%,50%,0.6) 색상:0도(빨강) 채도 100% 밝기 50% 투명도 60%
+        <div id="hiiii">안녕하세요</div>
+     </pre>
+
+     <h2>writing-mode</h2>
+     <pre>
+        글자 쓰는 방향
+        <strong>horizontal-tb</strong>
+        일반적인 영어/한국어 쓰기 방향
+        <div id="a">안녕하세요</div>
+
+        <strong>vertical-rl</strong>
+        일본어처럼 오른쪽에서 시작하는 세로 쓰기
+        <div id="b">안녕하세요</div>
+
+        <strong>vertical-lr</strong>
+        세로쓰기지만 왼쪽에서 오른쪽으로 진행
+        <div id="c">안녕하세요</div>
+     </pre>
+     
+     <h2>inline-start</h2>
+     <pre>
+        <strong>흐름 시작 방향</strong>
+        inline-start:글 방향을 기준으로 글이 시작되는 쪽
+        inline-end:글 방향을 기준으로 글이 끝나는 쪽
+        horizontal-tb:왼쪽
+        vertical-rl:오른쪽
+        vertical-lr:아래쪽
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQK1dXQrVCbBvMdU4A83XdwM7Rtte8YFsWFI-y5JLABKyTRyUTBQko0SqyrqNJQf96aNdEqLNo5eZglqCIH2udWwuewokYR5-0QnjucNq4Y5Q" alt="고양이">
+     </pre>
+
+     <h2>overflow</h2>
+
+     <pre>
+        <strong>내용이 넘칠 때 처리 방식</strong>
+        overflow: hidden; 넘친 부분 잘라냄(스크롤 없음)
+        <div id="q">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Perspiciatis pariatur maiores consectetur nam hic accusantium nemo officiis,
+            ab odit corrupti deserunt quo consequatur ipsum consequuntur? Repellat ex aut
+            laborum suscipit!</div>
+
+        overflow:scroll; 스크롤 향상 표시(내용 넘치든 말든)
+        <div id="w">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Maiores officiis iure maxime, eveniet hic quod provident ratione tempore voluptate 
+            dolor quisquam eos praesentium nulla repellat consectetur voluptas
+            , nemo mollitia! Ipsam?</div>
+
+        overflow:auto; 넘칠 때만 스크롤 생김
+        <div id="e">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Enim et magnam quidem illum, dolore necessitatibus culpa veritatis 
+            qui asperiores fugiat deserunt sapiente mollitia vel fuga dicta, laboriosam
+            voluptas similique earum!</div>
+
+        overflow-x, overflow-y; 가로,세로 각각 설정 가능
+        주의(width,height가 있어야 동작함)
+     </pre>
+
+    
+    
+</body>
+</html>
