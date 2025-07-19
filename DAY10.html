@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prac15-1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DAY10</h1>
+    <h2>Flexbox</h2>
+    <h3>정의</h3>
+    <h4>웹 페이지에서 요소들을 정렬하고 배치할 때 사용하는 CSS 모델</h4>
+    <h4>가로 세로 정렬, 공간 분배, 반응형 디자인 등</h4>
+
+    <h3>필요한 이유</h3>
+    <h4>기존 레이아웃 단점</h4>
+    <ul>
+        <li>세로 정렬이 매우 어려움</li>
+        <li>아이템 간 간격 조절이 복잡함</li>
+        <li>브라우저 크기 변화에 따라 자동 정렬이 어려움</li>
+    </ul>
+    <h4>이런 문제를 해결하기 위해 나온 것이 Flexbox</h4>
+
+    <h3>Flex Container에 적용되는 속성</h3>
+    <h4>1.display:flex</h4>
+    <h5>해당 요소를 Flex Container로 만들어 내부 자식 요소들을 flex item으로 배치</h5>
+    <h5>기본 축은 가로 방향이며 inline 요소는 display:inline-flex</h5>
+
+     <h4>2.flex-direction</h4>
+    <h5>주축의 방향 설정(기본값:row,오른쪽 방향)</h5>
+    <ul>
+        <li>row:기본,가로 방향으로 배치</li>
+        <li>row-reverse:오른쪽->왼쪽</li>
+        <li>column:세로 방향 위->아래</li>
+        <li>column-reverse:아래->위</li>
+    </ul>
+
+     <h4>3.justify-content</h4>
+    <h5>주축을 따라 item 정렬 방법 지정</h5>
+    <h5>flex-direction에 따라 가로/세로 방향이 바뀜</h5>
+    <ul>
+        <li>flex-start:시작점 정렬(왼쪽 or 위)</li>
+        <li>flex-end:끝점 정렬(오른쪽 or 아래)</li>
+        <li>center:가운데 정렬</li>
+        <li>space-between:양 끝 배치, 나머지는 동일 간격</li>
+        <li>space-around:아이템을 중심으로 동일한 간격</li>
+        <li>space-evenly:아이템과 공간 모두 동일 간격</li>
+    </ul>
+
+     <h4>4.flex-wrap</h4>
+    <h5>아이템이 한 줄에 다 들어가지 않을 때 줄바꿈 여부를 설정</h5>
+     <ul>
+        <li>nowrap:줄바꿈 안 함(기본값)</li>
+        <li>wrap:넘치면 다움 줄로 감</li>
+        <li>wrap-reverse:줄바꿈하되 아래 줄부터 위로 쌓음</li>
+    </ul>
+
+        <h4>5.align-items</h4>
+    <h5>교차축 기준으로 아이템 정렬</h5>
+    <h5>단일 줄의 정렬에 사용</h5>
+    <ul>
+        <li>flex-start:위쪽 정렬</li>
+        <li>flex-end:아래쪽 정렬</li>
+        <li>center:가운데 정렬</li>
+        <li>baseline:텍스트 기준선 기준으로 정렬</li>
+        <li>stretch:기본값. 높이나 너비가 자동으로 채워짐</li>
+    </ul>
+
+        <h4>6.align-content</h4>
+    <h5>여러 줄이 wrap 되었을 때 교차축에서 줄 간격을 정렬</h5>
+    <h5>align-items는 한 줄, align-content는 여러줄</h5>
+
+    <section id="container">
+        <div style="background-color: aliceblue; font-size: 100px;">H</div>
+        <div style="background-color: rgb(14, 207, 232);">E</div>
+        <div style="background-color: rgb(154, 223, 17); font-size: 150px;">L</div>
+        <div style="background-color: rgb(254, 201, 94);">L</div>
+        <div style="background-color: rgb(243, 157, 243);">O</div>
+    </section>
+
+    <h3>Flex Item에 적용되는 속성</h3>
+    <h4>1.flex-grow</h4>
+    <h5>남은 공간을 얼마나 확장해서 차지할지 비율로 지정</h5>
+    <h5>0이면 남는 공간을 차지하지 않음</h5>
+    <h5>숫자가 클수록 더 많은 공간을 차지함</h5>
+
+     <h4>2.flex-shrink</h4>
+    <h5>공간이 부족할 때 얼마나 줄일 수 있는지 비율로 지정</h5>
+    <h5>0이면 줄어들지 않음</h5>
+    <h5>숫자가 클수록 더 많이 줄어듦</h5>
+
+     <h4>3.flex-basic</h4>
+    <h5>아이템의 기본 크기 설정(가로,세로 방향)</h5>
+    <h5>width,height와 비슷하지만 flex iem의 기준 크기로 사용됨</h5>
+
+     <h4>flex(속기형)</h4>
+    <h5>flex-grow, flex-shrink, flex-basis</h5>
+    <pre>
+           .item{
+            flex:1 2 300px;
+        }
+        ->flex-grow: 1, flex-shrink: 2, flex-basis 300px
+    </pre>
+
+    <h4>4.align-self</h4>
+    <h5>개별 아이템의 교차축 정렬 지정</h5>
+    <h5>align-items의 개별 버전</h5>
+    
+    <section id="container2">
+        <div style="background-color: aliceblue;"></div>
+        <div style="background-color: rgb(14, 207, 232);"></div>
+        <div style="background-color: rgb(154, 223, 17); "></div>
+        <div style="background-color: rgb(254, 201, 94);"></div>
+        <div style="background-color: rgb(243, 157, 243);"></div>
+    </section>
+
+    <h3>for flex shorthand</h3>
+    <h4>flex속기 속성</h4>
+    <main>
+        <section class="sidebar"></section>
+        <section class="maincontent"></section>
+        <section class="sidebar"></section>
+    </main>
+   
+    
+    
+
+    
+</body>
+</html>
