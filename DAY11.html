@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DAY11</h1>
+    <h2>Bootstrap</h2>
+    <h3><br>정의</h3>
+    <h4>트위터에서 개발한 오픈소스 CSS 프레임 워크</h4>
+    <h4>반응형 웹 페이지를 빠르게 만들 수 있게 도와줌</h4>
+
+    <h3><br>특징</h3>
+    <ul>
+        <li>미리 정의된 디자인 시스템</li>
+        <li>반응형 레이아웃</li>
+        <li>모바일 우선</li>
+        <li>쉽고 빠른 개발</li>
+        <li>다양한 유틸리티 클래스(margin, padding)</li>
+    </ul>
+
+    <h3>기본 문법 구조</h3>
+    <pre>
+        &lt;head&gt;
+           필수 CSS 링크
+           &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+          선택 JS (알림, 모달 등 동작용)
+          &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+        &lt;/body&gt;
+
+        bootstrap.min.css:디자인을 위한 모든 클래스가 정의되어 있음
+        bootstrap.bundle.min.js:JavaScript 기반의 동작 요소에 필요
+    </pre>
+
+    <h3>컨테이너와 레이아웃 시스템</h3>
+    <pre>
+        &lt;div class="container"&gt;...&lt;/div&gt; : 고정 너비
+        &lt;div class="container-fluid"&gt;...&lt;/div&gt; : 전체 화면 너비
+        &lt;div class="container-xl"&gt;...&lt;/div&gt; : 화면 너비에 따라 다르게 적용됨(반응형)
+    </pre>
+
+    <div class="container-xl">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ullam excepturi itaque sint fugiat accusantium accusamus optio eius, mollitia sit quam quibusdam, perspiciatis vel libero. Quas officiis neque fugiat tempore.
+        Repellat, vero beatae voluptate omnis doloremque labore officiis delectus! Tempore, quod. Quaerat delectus et maiores architecto quo quae debitis rem sint nisi dolorem earum, aperiam libero eaque nihil cupiditate voluptatem.
+        Adipisci, impedit alias. Laborum eaque facilis eligendi atque ipsa dignissimos magnam quisquam? Quos similique, culpa delectus atque magni sint sapiente. Vel dicta cumque quae, optio id fuga blanditiis quisquam dolorum.
+        Tempora libero optio, consectetur impedit, harum earum consequuntur suscipit voluptatibus iure sunt maiores voluptate numquam ducimus, autem quos magni rerum necessitatibus doloremque quo. Sint, suscipit libero temporibus eligendi aliquid deserunt.
+        Quas, a. Quaerat quisquam debitis, cupiditate incidunt reiciendis doloremque quae illo, voluptatum nam quibusdam, labore porro. Eos, id numquam exercitationem odit beatae soluta qui sequi, illo reiciendis, blanditiis odio dolor!
+        Necessitatibus iure enim, quaerat eveniet nam rerum at cum numquam accusamus odit consequatur? Vero at repudiandae inventore totam nihil est consequatur doloribus, porro maiores debitis, omnis cumque ea recusandae eius?
+        Error illum odit adipisci quis inventore dolore tenetur veritatis accusantium sunt enim, laboriosam perferendis totam vero placeat nostrum repudiandae fugit ab beatae itaque a. Reiciendis dicta iste repellat impedit atque!
+        Ea earum doloremque blanditiis magnam consequuntur nisi harum deleniti neque qui nobis. Quo optio eligendi quibusdam dolore totam! Non ab aperiam vero iste? Doloribus impedit reiciendis suscipit sit ipsum aperiam.
+        Natus blanditiis adipisci quisquam perferendis ullam, beatae ipsum nostrum doloribus. Esse in illum maiores, molestiae odit voluptates. Quibusdam consequatur nam asperiores, quis sint a itaque optio eaque cupiditate aperiam earum.
+        Nihil voluptatum excepturi veniam libero eos omnis voluptas dolores ratione asperiores expedita, saepe assumenda odio, possimus nesciunt esse eius vel provident nemo debitis rerum iste, ipsam nobis? Dignissimos, ad perferendis!
+    </div>
+
+    <h3><br>그리드 시스템</h3>
+    <h4>12칸을 기준으로 분할된 구조</h4>
+    <pre>
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                 &lt;div class="col"&gt;...&lt;/div&gt;
+                 &lt;div class="col-6"&gt;...&lt;/div&gt;
+                 &lt;div class="col-5"&gt;...&lt;/div&gt;
+            &lt;/div>
+        &lt;/div>
+
+          클래스    화면 크기 기준
+         .col-sm-6     >=576px
+         .col-md-6     >=768px 
+         .col-lg-6     >=992px 
+         .col-xl-6     >=1200px 
+    </pre>
+
+    <div class="container">
+        <div class="row">
+            <div class="bg-danger col-lg-6 col-sm-2">col</div>
+            <div class="bg-warning col-lg-6 col-sm-6">col</div>
+            <div class="bg-danger col-lg-12 col-sm-4">col</div>
+        </div>
+    </div>
+
+    <h3><br>유틸리티 클래스</h3>
+    <ul>
+        <li>색상:bg-damger, text-primary, btn-warning</li>
+        <li>정렬:text-center, float-end, d-flex</li>
+        <li>여백:m-3, p-2, mb-5(m=margin, p=padding, t=top, b=bottom, s=start, e=end)</li>
+        <li>글자 크기:fs-1, fs-2(fs=font-size)</li>
+        <li>폰트 굵기:fw-bold, fw-light</li>
+    </ul>
+
+    <h3>버튼</h3>
+    <h4>주요 종류</h4>
+    <ul>
+        <li>btn-primary(파란색), btn-secondary(회색), btn-success(초록색), btn-danger(빨간색) 등</li>
+        <li>btn-outline-*:테두리만 있는 버튼</li>
+        <li>btn-lg, btn-sm:크기 조절</li>
+        <li>disabled:비활성화 상태</li>
+    </ul>
+
+    <pre>
+        기본
+        &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+        테두리
+        &lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+        비활성화
+        &lt;button type="button" class="btn btn-primary" disabled&gt;Primary button&lt;/button&gt;ㅋ
+    </pre>
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+<br>
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
+<br>
+<button type="button" class="btn btn-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-secondary" disabled>Button</button>
+<button type="button" class="btn btn-outline-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-outline-secondary" disabled>Button</button>
+
+<h3><br>타이포그래피</h3>
+<pre>
+    .display-1 ~ .display-6:커다란 헤딩 스타일
+    .blockquote, .blockquote-footer:인용문
+
+    인용문 구조
+    &lt;figure&gt;  인용 콘텐츠를 묶는 태그
+       &lt;blockquote class="blockquote"&gt; 인용문
+         &lt;p>...&lt;/p&gt;  인용문 내용
+        &lt;/blockquote&gt;
+       &lt;figcaption class="blockquote-footer"&gt; 인용한 사람의 이름이나 출처
+         ...&lt;cite>...&lt;/cite&gt;  출처 이름이나 제목
+         &lt;/figcaption&gt; 
+     &lt;/figure&gt;
+</pre>
+
+<h1 class="display-1">Display 1</h1>
+<h1 class="display-2">Display 2</h1>
+<h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1>
+<h1 class="display-5">Display 5</h1>
+<h1 class="display-6">Display 6</h1>
+
+<figure>
+  <blockquote class="blockquote">
+    <p>A well-known quote, contained in a blockquote element.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Someone famous in <cite title="Source Title">Source Title</cite>
+  </figcaption>
+</figure>
+
+<h3>Badge</h3>
+<h4>작은 숫자, 텍스트, 상태 드응ㄹ 강조해서 보여주는 UI요소</h4>
+<pre>
+    기본 문법
+    &lt;span class="badge bg-primary"&gt;NEW&lt;/span&gt;
+    badge:배지 스타일 적용
+    bg-primary:배경색 설정(파란색)
+    글자는 작고 둥근 사각형 형태로 나타남
+
+    <strong>position-relative/absolute</strong>
+    부모 .position-relative 기준으로
+    자식 .position-absolute가 상단 우측(top-0 start-100)으로 위치
+    translate-middle:가운데 정렬 미세 조정
+</pre>
+<span class="badge bg-primary">NEW</span>
+<button type="button" class="btn btn-primary position-relative">
+  Inbox
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    99+
+    <span class="visually-hidden">unread messages</span>
+  </span>
+</button>
+
+<h3><br>Alert</h3>
+<pre>
+    &lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+        내용
+    &lt;button class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    
+    alert-warning, alert-danger, alert-success 등
+    alert-dismissible:닫기 가능
+    fade show:페이드인 효과
+    data-bs-dismiss="alert":Bootstrap의 JS로 닫기 동작을 자동 처리
+</div>
+</pre>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<h3><br>아이콘 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane-engines-fill" viewBox="0 0 16 16">
+  <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.35 4.35 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0"/>
+</svg></h3> 
+<pre>
+   Bootstrap 아이콘을 &lt;svg&gt;로 직접 삽입 가능
+   CDN 방식: https://icons.getbootstrap.com/ 에서 복사
+   클래스 bi bi-아이콘명
+</pre>
+
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+</body>
+</html>
